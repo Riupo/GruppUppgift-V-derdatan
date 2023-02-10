@@ -128,7 +128,7 @@ namespace GruppUppgift_Väderdata
                 })
                .Where(x => x != null)
                 .GroupBy(x => x.Date)
-                .OrderByDescending(group => group.Average(averageHumidity => averageHumidity.Humidity))
+                .OrderByDescending(group => group.Average(averageHumidity => averageHumidity.Humidity)) //s
                 .ToList();
 
             foreach (var group in dataByDate)
